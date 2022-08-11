@@ -1,5 +1,5 @@
 # RRulex
-RRulex parses an RRULE from the [iCalendar RFC-2445](https://www.ietf.org/rfc/rfc2445.txt) and expands into a usable struct.
+RRulex is an Elixir package that parses an RRULE from the [iCalendar RFC-2445](https://www.ietf.org/rfc/rfc2445.txt) and expands into a usable struct.
 
 This Hex package is an extension of Austin Hammer's [RRulex](https://github.com/austinh/rrulex) that unfortunately never made it to distribution.
 

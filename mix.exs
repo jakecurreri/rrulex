@@ -15,6 +15,22 @@ defmodule RRulex.MixProject do
     ]
   end
 
+  defp description do
+  """
+  RRulex is an Elixir package that parses an RRULE from 
+  the iCalendar RFC-2445 and expands into a usable struct.
+  """
+  end
+  defp package do
+    [# These are the default files included in the package
+    name: :rrulex,
+    files: ["lib", "mix.exs", "README*", "LICENSE*"],
+    maintainers: ["Jake Curreri (jakec@hey.com)"],
+    licenses: ["MIT"],
+    links: %{"GitHub" => "https://github.com/jakecurreri/rrulex"}
+    ]
+  end
+
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
