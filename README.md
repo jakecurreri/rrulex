@@ -1,9 +1,13 @@
 # RRulex
+[![Hex.pm](https://img.shields.io/hexpm/v/rrulex.svg)](https://hex.pm/packages/rrulex) [![Documentation](https://img.shields.io/badge/documentation-gray)](https://hexdocs.pm/rrulex/)
+
 RRulex is an Elixir package that parses an RRULE from the [iCalendar RFC-2445](https://www.ietf.org/rfc/rfc2445.txt) and expands into a usable struct.
 
 This Hex package is an extension of Austin Hammer's [RRulex](https://github.com/austinh/rrulex) that unfortunately never made it to distribution.
 
 ## Getting Started
+Add `:rrulex` to the list of dependencies in `mix.exs`:
+
 
 ```elixir
 def deps do
@@ -19,7 +23,7 @@ Here's a few simple examples:
 > use RRulex
 > RRulex.parse("FREQ=DAILY")
 %RRulex{
-  by_day: [:friday],
+  by_day: [],
   by_hour: [],
   by_minute: [],
   by_month: [],
@@ -28,9 +32,9 @@ Here's a few simple examples:
   by_set_pos: [],
   by_week_number: [],
   by_year_day: [],
-  count: 6,
-  frequency: :weekly,
-  interval: 2,
+  count: nil,
+  frequency: :daily,
+  interval: nil,
   until: nil,
   week_start: nil
 }
