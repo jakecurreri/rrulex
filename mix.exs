@@ -40,8 +40,7 @@ defmodule RRulex.MixProject do
   defp package do
     [
       name: :rrulex,
-      files: ~w(lib priv .formatter.exs mix.exs README* readme* LICENSE*
-                  license* CHANGELOG* changelog* src),
+      files: ~w(lib .formatter.exs mix.exs README* LICENSE*),
       maintainers: ["Jake Curreri (jakec@hey.com)"],
       licenses: ["MIT"],
       links: %{"GitHub" => "https://github.com/jakecurreri/rrulex"}
