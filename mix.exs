@@ -8,26 +8,10 @@ defmodule RRulex.MixProject do
       elixir: "~> 1.13",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
-
-      # Docs
+      description: description(),
+      package: package(),
       name: "RRulex",
       source_url: "https://github.com/jakecurreri/rrulex",
-    ]
-  end
-
-  defp description do
-  """
-  RRulex is an Elixir package that parses an RRULE from 
-  the iCalendar RFC-2445 and expands into a usable struct.
-  """
-  end
-  defp package do
-    [# These are the default files included in the package
-    name: :rrulex,
-    files: ["lib", "mix.exs", "README*", "LICENSE*"],
-    maintainers: ["Jake Curreri (jakec@hey.com)"],
-    licenses: ["MIT"],
-    links: %{"GitHub" => "https://github.com/jakecurreri/rrulex"}
     ]
   end
 
@@ -43,6 +27,24 @@ defmodule RRulex.MixProject do
     [
       {:ex_doc, "~> 0.18", only: :dev},
       {:timex, "~> 3.7.9"},
+    ]
+  end
+
+  defp description do
+  """
+  RRulex is an Elixir package that parses an RRULE from 
+  the iCalendar RFC-2445 and expands into a usable struct.
+  """
+  end
+  
+  defp package do
+    [
+      name: :rrulex,
+      files: ~w(lib priv .formatter.exs mix.exs README* readme* LICENSE*
+                  license* CHANGELOG* changelog* src),
+      maintainers: ["Jake Curreri (jakec@hey.com)"],
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/jakecurreri/rrulex"}
     ]
   end
 end
